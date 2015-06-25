@@ -1,1 +1,4 @@
-hello world this is my git hub.
+hello world this is my git hub
+Git is a distributed version control system.
+Git is free software.
+
