@@ -1,4 +1,7 @@
 hello world this is my git hub
 Git is a distributed version control system.
 Git is free software.
+I love it.
+Git is a a freee software disbuted under the GPL.
+Git is a distributed version control system.
 
