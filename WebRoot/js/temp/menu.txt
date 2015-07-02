@@ -1,0 +1,11 @@
+[
+	{id:'p1',iconCls:'book_icon',text:'监控系统',leaf:true},
+	{id:'p2',iconCls:'matrix_icon',text:'专家决策',leaf:true},
+	{id:'p3',iconCls:'instru_icon',text:'气象综合站',leaf:true},
+	{id:'p4',iconCls:'notice_icon',text:'系统公告',leaf:true},
+	{id:'p5',iconCls:'org_icon',text:'组织机构',leaf:true},
+	{id:'p6',iconCls:'role_icon',text:'角色信息',leaf:true},
+	{id:'p7',iconCls:'user_icon',text:'用户账户',leaf:true},
+	{id:'p8',iconCls:'db_icon',text:'数据备份',leaf:true},
+	{id:'p9',iconCls:'log_icon',text:'系统日志',leaf:true}
+]

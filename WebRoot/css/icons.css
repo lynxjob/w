@@ -1,0 +1,68 @@
+.x-layout-collapsed-north{
+   background-image: url(../images/icons/top_home.png);
+   background-repeat:no-repeat;
+   background-position:center;
+}
+.x-layout-collapsed-west{
+   background-image: url(../images/icons/navi_home.png);
+   background-repeat:no-repeat;
+   background-position:center;
+}
+.menu_icon{
+	background: url(../images/icons/menus.png) no-repeat !important;
+}
+.navi_icon{
+	background: url(../images/icons/navi.png) no-repeat !important;
+}
+.home_icon{
+	background: url(../images/icons/home.png) no-repeat !important;
+}
+.close1_icon{
+	background: url(../images/icons/close1.png) no-repeat !important;
+}
+.close2_icon{
+	background: url(../images/icons/close2.png) no-repeat !important;
+}
+.close3_icon{
+	background: url(../images/icons/close3.png) no-repeat !important;
+}
+
+.user_icon{
+	background: url(../images/icons/user.png) no-repeat !important;
+}
+.shed_icon{
+	background: url(../images/icons/org.png) no-repeat !important;
+}
+.notice_icon{
+	background: url(../images/icons/notice.png) no-repeat !important;
+}
+.role_icon{
+	background: url(../images/icons/role.png) no-repeat !important;
+}
+.device_icon{
+	background: url(../images/icons/elect.png) no-repeat !important;
+}
+.video_monitor_icon{
+	background: url(../images/icons/book.png) no-repeat !important;
+}
+.monitor_icon{
+	background: url(../images/icons/instru.png) no-repeat !important;
+}
+.enviromon_icon{
+	background: url(../images/icons/matrix.png) no-repeat !important;
+}
+.expertsystem_icon{
+	background: url(../images/icons/furni.png) no-repeat !important;
+}
+.db_icon{
+	background: url(../images/icons/db.png) no-repeat !important;
+}
+.log_icon{
+	background: url(../images/icons/log.gif) no-repeat !important;
+}
+.assist_icon{
+	background: url(../images/icons/chart_bar.png) no-repeat !important;
+}
+.querysystem_icon{
+	background: url(../images/icons/chart_bar.png) no-repeat !important;
+}

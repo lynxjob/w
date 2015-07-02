@@ -1,0 +1,18 @@
+body {
+	background-color:#EEF2F6;
+}
+.loginWin{
+	background: url(../images/login/loginwin.png) no-repeat !important;
+}
+.username{
+	background: url('../images/login/username.png') no-repeat !important ;
+}
+.password{
+	background: url('../images/login/password.gif') no-repeat !important ;
+}
+.login{
+	background: url(../images/login/login.png) no-repeat !important;
+}
+.reset{
+	background: url(../images/login/reset.png) no-repeat !important;
+}

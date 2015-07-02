@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="base" location="1786,10" size="170,70" />
+  <package name="pams" location="226,115" size="1785,3640">
+    <action name="default" location="1570,57" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="manage" location="1570,166" size="150,104">
+      <result name="login">
+        <resourceEdge source="login" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="manage">
+        <resourceEdge source="manage" routing="0" target="index.jsp" />
+      </result>
+      <result name="reset">
+        <resourceEdge source="reset" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="logout">
+        <resourceEdge source="logout" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="video" location="1570,407" size="150,41">
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="enviro" location="1570,600" size="150,146">
+      <result name="loadRelayData">
+        <resourceEdge source="loadRelayData" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="loadDaqData">
+        <resourceEdge source="loadDaqData" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="startTimer">
+        <resourceEdge source="startTimer" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="stopTimer">
+        <resourceEdge source="stopTimer" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="setAuto">
+        <resourceEdge source="setAuto" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="setManual">
+        <resourceEdge source="setManual" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="warn" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="daq" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="shed" location="1325,1114" size="150,167">
+      <result name="listGrid">
+        <resourceEdge source="listGrid" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="move">
+        <resourceEdge source="move" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="shedType" location="1325,1496" size="150,104">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="device" location="1325,1762" size="150,62">
+      <result name="saveOrupdate">
+        <resourceEdge source="saveOrupdate" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="upload" location="1325,1902" size="150,62">
+      <result name="upload">
+        <resourceEdge source="upload" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="index.jsp" />
+      </result>
+    </action>
+    <action name="crop" location="1325,2010" size="150,125">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="assist" location="1150,3208" size="150,40" />
+    <action name="led" location="0,0" size="0,0">
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="client" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="listName">
+        <resourceEdge source="listName" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="provider" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="stock" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="return_goods" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="sell" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="return_sale" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="reserve" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="load">
+        <resourceEdge source="load" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="assistMenu" location="0,0" size="0,0">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="role" location="905,3176" size="150,104">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="user" location="660,3165" size="150,125">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="saveOrupdate">
+        <resourceEdge source="saveOrupdate" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="notice" location="485,2955" size="150,125">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="save">
+        <resourceEdge source="save" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="update">
+        <resourceEdge source="update" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="get">
+        <resourceEdge source="get" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="auth" location="310,2273" size="150,230">
+      <result name="getUserRoles">
+        <resourceEdge source="getUserRoles" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="saveUserRoles">
+        <resourceEdge source="saveUserRoles" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="getUserPowers">
+        <resourceEdge source="getUserPowers" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="saveUserPower">
+        <resourceEdge source="saveUserPower" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="deleteUserPower">
+        <resourceEdge source="deleteUserPower" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="getRolePowers">
+        <resourceEdge source="getRolePowers" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="saveRolePower">
+        <resourceEdge source="saveRolePower" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="deleteRolePower">
+        <resourceEdge source="deleteRolePower" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="loadMenus">
+        <resourceEdge source="loadMenus" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="loadButtons">
+        <resourceEdge source="loadButtons" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+    <action name="backup" location="65,2325" size="150,125">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="backup">
+        <resourceEdge source="backup" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="restore">
+        <resourceEdge source="restore" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="delete">
+        <resourceEdge source="delete" routing="0" target="jsonString.jsp" />
+      </result>
+      <result name="download" />
+    </action>
+    <action name="log" location="65,2612" size="150,41">
+      <result name="list">
+        <resourceEdge source="list" routing="0" target="jsonString.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="login.jsp" path="/login.jsp" location="71,135" size="150,55" />
+  <webResource name="jsonString.jsp" path="/page/jsonString.jsp" location="10,3775" size="150,55" />
+  <webResource name="index.jsp" path="/index.jsp" location="2066,275" size="150,55" />
+  <extendsEdge source="pams" target="base" routing="0" />
+</Struts2Diagram>
+

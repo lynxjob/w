@@ -1,0 +1,25 @@
+Ext.ns('Long');
+//动态引入的JS数组
+Long.importJS={
+    videomonitorpanel:['js/manage/video.js','js/manage/shedtree.js'],
+    enviromonpanel:['js/manage/enviro.js','js/manage/shedtree.js'],
+    monitorpanel:['js/manage/monitor.js','js/manage/shedtree.js'],
+    expertsystempanel:['js/manage/expert.js'],
+    querysystempanel:['js/manage/query.js','js/manage/daqGrid.js'],
+    shedpanel:['js/manage/shed.js'],
+    devicemanagepanel:['js/manage/device.js','js/manage/shedtree.js'],
+    cropgrid:['js/manage/crop.js','js/manage/cropform.js','ext/ux/FileUploadField.js','ext/ux/FormTableLayout.js','ext/ux/image.js'],
+    assistsystempanel:['js/manage/assist.js','js/manage/reserve.js'],  
+	userpanel:['js/sys/usertree.js','js/sys/user.js','js/sys/userform.js','js/sys/showrole.js','js/sys/showuserpower.js'],
+    noticegrid:['js/sys/notice.js','js/sys/noticeform.js'],
+    rolegrid:['js/sys/role.js','js/sys/roleform.js','js/sys/showrolepower.js'],
+    backupgrid:['js/sys/backup.js'],
+    loggrid:['js/sys/log.js'],
+    clientgrid:['js/manage/client.js'],
+    providergrid:['js/manage/provider.js'],
+    sellinggrid:['js/manage/selling.js'],
+    reservegrid:['js/manage/reserve.js'],
+    goodsgrid:['js/manage/return_goods.js'],
+    salegrid:['js/manage/return_sale.js'],
+    stockgrid:['js/manage/stock.js']
+};

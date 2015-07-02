@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<!-- Listener start -->
+	    <!--Spring ApplicationContext载入-->
+		<listener>
+		    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+		</listener>
+		<!-- Spring ApplicationContext配置文件的路径,此参数用于后面的Spring-Contextloader -->
+		<context-param>
+		    <param-name>contextConfigLocation</param-name>
+		    <param-value>classpath:beans.xml</param-value>
+		</context-param>
+		
+		<!--Spring刷新Introspector防止内存泄露  LynxGet 2015年6月25日18:35:25-->  
+		<listener>
+			<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+		</listener>	
+		
+		<!-- 系统服务初始化  LynxGet 2015年6月25日18:35:54-->
+		<listener>
+			<listener-class>pams.servlet.SysInitServlet</listener-class>
+		</listener>
+	<!-- Listener end -->
+
+	<!-- Filter start -->
+		<!-- 编码设置 -->
+		<filter>
+			<filter-name>encodingFilter</filter-name>
+		    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		    <init-param>
+		      	<param-name>encoding</param-name>
+		      	<param-value>UTF-8</param-value>
+		    </init-param>
+		</filter>
+		<filter-mapping>
+		    <filter-name>encodingFilter</filter-name>
+		    <url-pattern>/*</url-pattern>
+		</filter-mapping>
+		
+		<!-- OpenSessionInViewFilter -->
+		<filter>
+			<filter-name>OpenSessionInViewFilter</filter-name>
+			<filter-class>
+				org.springframework.orm.hibernate3.support.OpenSessionInViewFilter
+			</filter-class>
+		</filter>	
+		
+		<!--struts2 滤镜配置 -->
+		<filter>
+		    <filter-name>struts2</filter-name>
+		    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+		</filter>
+		<filter-mapping>
+		    <filter-name>struts2</filter-name>
+		    <url-pattern>/*</url-pattern>
+		</filter-mapping>
+	<!-- Filter end -->
+	
+	<!-- File start-->
+		<!-- welcome file list-->
+		 <welcome-file-list>
+	        <welcome-file>load</welcome-file>
+	    </welcome-file-list>
+	    
+		<!-- error page -->
+		<error-page>
+			<error-code>404</error-code>
+			<location>/page/404.html</location>
+		</error-page>
+	<!-- File end -->
+</web-app>

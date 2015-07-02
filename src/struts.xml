@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.devMode" value="false"></constant>
+	<constant name="struts.multipart.parser" value="jakarta"/>
+	<!--基本package，包含一个全局的action-->
+	<package name="base" namespace="/" extends="struts-default">
+		<global-results>
+    		<result name="load">/login.jsp</result>
+    		<result name="nopower">/page/nopower.html</result>
+    	</global-results>
+	</package>
+	
+	<package name="pams" namespace="/" extends="base"> 
+
+		<!--设置默认action-->
+		<default-action-ref name="default"></default-action-ref>
+    	<action name="default">
+    		<result>/login.jsp</result>
+    	</action>
+	
+		<!--主页-->
+	    <action name="manage" class="pams.action.ManageAction">
+	    	<result name="login">/page/jsonString.jsp</result>
+	   		<result name="manage">/index.jsp</result>
+	   		<result name="reset">/page/jsonString.jsp</result>
+	   		<result name="logout">/page/jsonString.jsp</result>
+	    </action>
+	    
+	    <!--视频监测-->
+		<action name="video" class="pams.action.VideoMonitorAction">
+			<result name="load">/page/jsonString.jsp</result>
+		</action>
+		
+		<!--环境监测-控制中心-->
+		<action name="enviro" class="pams.action.EnviroMonitAction">
+			<result name="loadRelayData">/page/jsonString.jsp</result>
+			<result name="loadDaqData">/page/jsonString.jsp</result>
+			<result name="startTimer">/page/jsonString.jsp</result>
+			<result name="stopTimer">/page/jsonString.jsp</result>
+			<result name="setAuto">/page/jsonString.jsp</result>
+			<result name="setManual">/page/jsonString.jsp</result>
+		</action>
+		
+		<!--报警系统-->
+		<action name="warn" class="pams.action.WarnAction">
+			<result name="list">/page/jsonString.jsp</result>
+		</action>
+		
+		<!--查询平台-->
+		<action name="daq" class="pams.action.DaqAction">
+			<result name="list">/page/jsonString.jsp</result>
+		</action>
+	    
+	    <!--大棚管理-->
+		<action name="shed" class="pams.action.ShedManageAction">
+			<!--大棚管理中显示大棚表格列表  -->
+			<result name="listGrid">/page/jsonString.jsp</result>
+			<!-- 用户账户中显示所有大棚列表 -->
+			<result name="list">/page/jsonString.jsp</result>
+			<!--控制中心 监测中心模块中大棚列表显示 -->
+			<result name="load">/page/jsonString.jsp</result>
+			<result name="save">/page/jsonString.jsp</result>
+			<result name="update">/page/jsonString.jsp</result>
+			<result name="delete">/page/jsonString.jsp</result>
+			<result name="move">/page/jsonString.jsp</result>
+		</action>
+		
+	    <!--大棚类型管理-->
+		<action name="shedType" class="pams.action.ShedTypeManageAction">			
+			<result name="list">/page/jsonString.jsp</result>
+			<result name="save">/page/jsonString.jsp</result>
+			<result name="update">/page/jsonString.jsp</result>
+			<result name="delete">/page/jsonString.jsp</result>
+		</action>
+			
+		<!--设备管理-->
+		<action name="device" class="pams.action.DeviceManageAction">
+			<result name="saveOrupdate">/page/jsonString.jsp</result>
+			<result name="load">/page/jsonString.jsp</result>
+		</action>
+		
+		<!-- Crop-upload -->
+		<action name="upload" class="pams.action.UploadAction">
+            <interceptor-ref name="fileUpload">
+            	<param name="allowedTypes">image/bmp,image/png,image/jpg,image/pjpeg,image/gif,image/jpeg</param>
+            	<param name="maximumSize">20000000</param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <param name="savePath">/images/upload</param>
+            <result name="upload">/page/jsonString.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
+        
+        <!--作物管理  -->
+        <action name="crop" class="pams.action.CropManageAction">
+        	<result name="list">/page/jsonString.jsp</result>
+        	<result name="load">/page/jsonString.jsp</result>
+        	<result name="save">/page/jsonString.jsp</result>
+        	<result name="update">/page/jsonString.jsp</result>
+        	<result name="delete">/page/jsonString.jsp</result>
+        	<result name="loadData">/page/jsonString.jsp</result>
+        </action>
+        
+		<!-- 辅助系统 -->
+		<action name="assist" class="pams.action.AssistSystemAction">
+		
+		</action>
+		
+		<!-- LED控制 -->
+		<action name="led" class="pams.action.LedAction">
+			<result name="save">/page/jsonString.jsp</result>
+		
+		</action>
+		
+		<!-- 辅助系统 -->
+							<!-- 客户基本信息 -->
+		<action name="client" class="pams.action.ClientMessageAction">
+			<result name="list">/page/jsonString.jsp</result>
+        	<result name="load">/page/jsonString.jsp</result>
+        	<result name="save">/page/jsonString.jsp</result>
+        	<result name="update">/page/jsonString.jsp</result>
+        	<result name="delete">/page/jsonString.jsp</result>
+		</action>
+							<!-- 供应商基本信息 -->
+		<action name="provider" class="pams.action.ProviderMessageAction">
+			<result name="list">/page/jsonString.jsp</result>
+        	<result name="load">/page/jsonString.jsp</result>
+        	<result name="save">/page/jsonString.jsp</result>
+        	<result name="update">/page/jsonString.jsp</result>
+        	<result name="delete">/page/jsonString.jsp</result>
+		</action>
+							<!-- 进幼苗账单 -->
+		<action name="stock" class="pams.action.StockAction">
+			<result name="list">/page/jsonString.jsp</result>
+        	<result name="load">/page/jsonString.jsp</result>
+        	<result name="save">/page/jsonString.jsp</result>
+        	<result name="update">/page/jsonString.jsp</result>
+        	<result name="delete">/page/jsonString.jsp</result>
+		</action>
+							<!-- 退幼苗账单 -->
+		<action name="return_goods" class="pams.action.Return_GoodsAction">
+			<result name="list">/page/jsonString.jsp</result>
+        	<result name="load">/page/jsonString.jsp</result>
+        	<result name="save">/page/jsonString.jsp</result>
+        	<result name="update">/page/jsonString.jsp</result>
+        	<result name="delete">/page/jsonString.jsp</result>
+		</action>
+							<!-- 销售账单 -->
+		<action name="sell" class="pams.action.SellingAction">
+			<result name="list">/page/jsonString.jsp</result>
+        	<result name="load">/page/jsonString.jsp</result>
+        	<result name="save">/page/jsonString.jsp</result>
+        	<result name="update">/page/jsonString.jsp</result>
+        	<result name="delete">/page/jsonString.jsp</result>
+		</action>
+							<!-- 退销售 账单-->
+		<action name="return_sale" class="pams.action.Return_SaleAction">
+			<result name="list">/page/jsonString.jsp</result>
+        	<result name="load">/page/jsonString.jsp</result>
+        	<result name="save">/page/jsonString.jsp</result>
+        	<result name="update">/page/jsonString.jsp</result>
+        	<result name="delete">/page/jsonString.jsp</result>
+		</action>
+							<!-- 库存管理 -->
+		<action name="reserve" class="pams.action.ReserveAction">
+			<result name="list">/page/jsonString.jsp</result>
+        	<result name="load">/page/jsonString.jsp</result>
+        	<result name="save">/page/jsonString.jsp</result>
+        	<result name="update">/page/jsonString.jsp</result>
+        	<result name="delete">/page/jsonString.jsp</result>
+		</action>
+		<!-- 辅助功能 -->
+		<action name="assistMenu" class="pams.action.AssistFunctionManagerAction">
+			<result name="list">/page/jsonString.jsp</result>
+			<result name="save">/page/jsonString.jsp</result>
+			<result name="update">/page/jsonString.jsp</result>
+			<result name="delete">/page/jsonString.jsp</result>
+		</action>
+		
+		<!--角色信息-->
+		<action name="role" class="pams.action.RoleAction">
+			<result name="list">/page/jsonString.jsp</result>
+			<result name="save">/page/jsonString.jsp</result>
+			<result name="update">/page/jsonString.jsp</result>
+			<result name="delete">/page/jsonString.jsp</result>
+		</action>
+		
+	    <!--用户账户-->
+		<action name="user" class="pams.action.UserAction">
+			<result name="list">/page/jsonString.jsp</result>
+			<result name="save">/page/jsonString.jsp</result>
+			<result name="update">/page/jsonString.jsp</result>
+			<result name="delete">/page/jsonString.jsp</result>
+			<result name="saveOrupdate">/page/jsonString.jsp</result>
+		</action>     
+		
+		<!--系统公告-->
+		<action name="notice" class="pams.action.NoticeAction">
+			<result name="list">/page/jsonString.jsp</result>
+			<result name="save">/page/jsonString.jsp</result>
+			<result name="update">/page/jsonString.jsp</result>
+			<result name="delete">/page/jsonString.jsp</result>
+			<result name="get">/page/jsonString.jsp</result>
+		</action>
+		
+		<!--权限认证-->
+		<action name="auth" class="pams.action.AuthAction">
+			<result name="getUserRoles">/page/jsonString.jsp</result>
+			<result name="saveUserRoles">/page/jsonString.jsp</result>
+			<result name="getUserPowers">/page/jsonString.jsp</result>
+			<result name="saveUserPower">/page/jsonString.jsp</result>
+			<result name="deleteUserPower">/page/jsonString.jsp</result>
+			<result name="getRolePowers">/page/jsonString.jsp</result>
+			<result name="saveRolePower">/page/jsonString.jsp</result>
+			<result name="deleteRolePower">/page/jsonString.jsp</result>
+			<result name="loadMenus">/page/jsonString.jsp</result>
+			<result name="loadButtons">/page/jsonString.jsp</result>
+		</action>
+		
+		<!--数据备份-->
+		<action name="backup" class="pams.action.BackupAction">
+			<result name="list">/page/jsonString.jsp</result>
+			<result name="backup">/page/jsonString.jsp</result>
+			<result name="restore">/page/jsonString.jsp</result>
+			<result name="delete">/page/jsonString.jsp</result>
+			<!--<param name="inputPath">/images/loading.gif</param>-->
+			<result name="download" type="stream">
+                <!--<param name="contentType">text/plain</param>-->
+                <!-- <param name="inputName">inputStream</param>--> 
+                <param name="contentDisposition">filename="${fileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+		</action>
+		
+		<!--系统日志-->
+		<action name="log" class="pams.action.LogAction">
+			<result name="list">/page/jsonString.jsp</result>
+		</action>
+	
+    </package>
+</struts>

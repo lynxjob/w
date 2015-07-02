@@ -1,0 +1,39 @@
+[{
+    text: '用户', 
+    iconCls:'user_icon',
+    children: [{
+    	id:1,
+        text: '查看用户',
+        leaf: true,
+        checked: false
+    },{
+    	id:2,
+        text: '添加用户',
+        leaf: true,
+        checked: false
+    },{
+    	id:3,
+        text: '删除用户',
+        leaf: true,
+        checked: true
+    }]
+},{
+    text: '公告',
+    iconCls:'notice_icon',
+    children: [{
+    	id:4,
+        text: '查看公告',
+        leaf: true,
+        checked: false
+    },{
+    	id:5,
+        text: '添加公告',
+        leaf: true,
+        checked: false
+    },{
+    	id:6,
+        text: '删除公告',
+        leaf: true,
+        checked: false
+    }]
+}]

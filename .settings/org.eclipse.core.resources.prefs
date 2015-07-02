@@ -1,0 +1,24 @@
+#Sun Dec 23 11:18:52 CST 2012
+eclipse.preferences.version=1
+encoding//src/comm.properties=UTF-8
+encoding//src/pams/dao/DaqDao.java=UTF-8
+encoding//src/pams/dao/Impl/DaqDaoImpl.java=UTF-8
+encoding//src/pams/events/AbstractEvent.java=UTF-8
+encoding//src/pams/events/DaqEvent.java=UTF-8
+encoding//src/pams/model/DaqData.java=UTF-8
+encoding//src/pams/service/Impl/DaqManager.java=UTF-8
+encoding//src/pams/servlet/OpDAQServlet.java=UTF-8
+encoding//src/pams/servlet/StartServlet.java=UTF-8
+encoding//src/pams/socket/Client.java=UTF-8
+encoding//src/pams/socket/ClientBuffer.java=UTF-8
+encoding//src/pams/socket/TcpManager.java=UTF-8
+encoding//src/pams/socket/TcpServer.java=UTF-8
+encoding//src/pams/socket/service/ICommunicator.java=UTF-8
+encoding//src/pams/socket/service/TcpCommunictor.java=UTF-8
+encoding//src/pams/timer/CTimerTask.java=UTF-8
+encoding//src/pams/timer/ReadDAQTask.java=UTF-8
+encoding//src/pams/util/CalcCRC.java=UTF-8
+encoding//src/pams/util/DaqDataBuffer.java=UTF-8
+encoding//src/pams/util/PropertyTool.java=UTF-8
+encoding/<project>=UTF-8
+encoding/src=UTF-8
