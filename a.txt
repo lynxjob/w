@@ -8,5 +8,5 @@ Git has a mutable index called stage.
 Git tracks changes.
 Get it!
 different?
- git is a good idea!
- git master! update ! 18/16:
+Creating a new branch is quick!
+v
