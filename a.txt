@@ -8,3 +8,4 @@ Git has a mutable index called stage.
 Git tracks changes.
 Get it!
 different?
+ git is a good idea!
