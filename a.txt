@@ -10,6 +10,5 @@ Get it!
 different?
 Creating a new branch is quick!
 deevvvvvv
-issue-101
 Master  branch
-
+git lynx dev
